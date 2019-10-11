@@ -26,7 +26,7 @@ public class Pong extends JFrame {
 		setTitle("Pong");
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setSize(400, 300);
+		setSize(600, 400);
 				
 		// Initial status bar displaying scores
 		JLabel score = new JLabel("Player A | Player B", JLabel.CENTER);
@@ -37,7 +37,7 @@ public class Pong extends JFrame {
 		add(gameEngine);
 		
 		addKeyListener(new KeyAdapter() {
-
+//improved the movement from 5 to 20 pixels
 			@Override
 			public void keyPressed(KeyEvent e) {
 				switch (e.getKeyCode()) {
@@ -45,16 +45,16 @@ public class Pong extends JFrame {
 					gameEngine.start();
 					break;
 				case KeyEvent.VK_UP:
-					gameEngine.moveB(-5);
+					gameEngine.moveB(-20);
 					break;
 				case KeyEvent.VK_DOWN:
-					gameEngine.moveB(+5);
+					gameEngine.moveB(+20);
 					break;
 				case KeyEvent.VK_E:
-					gameEngine.moveA(-5);
+					gameEngine.moveA(-20);
 					break;
 				case KeyEvent.VK_D:
-					gameEngine.moveA(5);
+					gameEngine.moveA(20);
 					break;
 				}
 			}
