@@ -54,7 +54,7 @@ public class Pong extends JFrame {
 					gameEngine.moveA(-20);
 					break;
 				case KeyEvent.VK_D:
-					gameEngine.moveA(20);
+					gameEngine.moveA(+20);
 					break;
 				}
 			}
